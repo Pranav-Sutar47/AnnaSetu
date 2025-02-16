@@ -63,7 +63,7 @@ export default function Login() {
   return (
     <div className="container-fluid background">
       <h1 className="text-center" style={{ color: "#dd6b20" }}>
-        Annadata
+        AnnaSetu
       </h1>
       <div className="mt-3 d-flex justify-content-center align-items-center p-1" data-aos='fade-up'>
         

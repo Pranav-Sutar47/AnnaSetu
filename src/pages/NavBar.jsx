@@ -28,7 +28,7 @@ export default function NavBar(){
     return(
         <Navbar expand={'false'} className="bg-body-tertiary mb-5">
           <Container fluid>
-            <Navbar.Brand as={Link} to="/" style={{color:'#fb923c',fontWeight:700}}>Annadata</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/" style={{color:'#fb923c',fontWeight:700}}>AnnaSetu</Navbar.Brand>
             <div className='d-flex gap-2'>
                 {!login && <Button variant='outline-success' onClick={ ()=> navigate('/login')}>Login</Button>}
                 <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
@@ -42,7 +42,7 @@ export default function NavBar(){
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
-                  Annadata
+                  AnnaSetu
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

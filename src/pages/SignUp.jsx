@@ -42,7 +42,7 @@ export default function Signup() {
   const templateParams = {
     to_email : email,
     otp : sentOtp,
-    from_name : 'Annadata'
+    from_name : 'AnnaSetu'
   }
 
   const sendEmail = () => {
@@ -143,7 +143,7 @@ export default function Signup() {
   return (
     <div className="container-fluid background">
       <h1 className="text-center" style={{ color: "#dd6b20" }}>
-        AnnaData
+        AnnaSetu
       </h1>
       <div className="mt-3 d-flex justify-content-center align-items-center p-2" data-aos='fade-up'>
         <div
