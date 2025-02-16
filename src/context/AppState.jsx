@@ -8,6 +8,8 @@ export default function AppState(props) {
 
     const [posts,setPosts] = useState([]);
 
+    const [userPosts,setUserPosts] = useState([]);
+
     const getAllPost = async()=>{
         try{
             let url = String(import.meta.env.VITE_URL) + 'api/v1//getAllPosts';
@@ -23,7 +25,7 @@ export default function AppState(props) {
     }
 
     return (
-        <AppContext.Provider value={{login,setLogin,posts,getAllPost}}>
+        <AppContext.Provider value={{login,setLogin,posts,getAllPost,userPosts,setUserPosts}}>
             {props.children}
         </AppContext.Provider>
     )

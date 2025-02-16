@@ -45,8 +45,18 @@ export default function Login() {
           }
 
           setLoad(false);
-        }catch(err){
-          console.log(err);
+        }catch (err) {
+          reset();      
+          // Handle error response
+          if (err.response) {
+            // Server responded with a status code outside 2xx
+            showToast(err.response.data.message || "Login failed", "error");
+          } else {
+            // Network or unknown error
+            showToast("Something went wrong. Please try again.", "error");
+          }
+        } finally {
+          setLoad(false);
         }
       }
 

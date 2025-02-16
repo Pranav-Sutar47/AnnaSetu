@@ -1,4 +1,3 @@
-import { Button } from "@chakra-ui/react"
 import { BrowserRouter ,Route,Routes,Navigate} from "react-router-dom"
 import NavBar from "./pages/NavBar"
 import Login from "./pages/Login"
@@ -7,6 +6,7 @@ import Signup from "./pages/SignUp"
 import DetailInfo from "./pages/DetailInfo"
 import Post from "./pages/Post"
 import AppState from "./context/AppState"
+import UserPost from "./pages/UserPost"
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
           <Route path="/signUp" element={<Signup/>}/>
           <Route path="/detailInfo" element={<DetailInfo/>}/>
           <Route path="/post" element={<Post/>}/>
+          <Route path='/userPost' element={<UserPost/>}/>
         </Routes>
     </BrowserRouter>
     </AppState>
