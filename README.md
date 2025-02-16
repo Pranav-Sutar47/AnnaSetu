@@ -34,7 +34,7 @@ AnnaSetu is a platform that enables users to share leftover food from events or 
 
 ### Clone the repository:
 ```bash
-git clone https://github.com/your-username/annasetu.git
+git clone https://github.com/Pranav-Sutar47/AnnaSetu.git
 cd annasetu
 ```
 
