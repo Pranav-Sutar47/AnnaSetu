@@ -22,7 +22,7 @@ export default function AllCard() {
     <div className='container-fluid'>
         <div className='row' data-aos="fade-up">
             {
-                posts.length > 0 ? 
+                posts && posts.length > 0 ? 
                 (
                     posts.map((item,index)=>{
                         return (
