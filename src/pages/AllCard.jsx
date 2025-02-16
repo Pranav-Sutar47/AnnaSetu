@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import CardComponent from './CardComponent'
 import AppContext from '../context/AppContext'
+import Aos from 'aos';
 
 export default function AllCard() {
 
@@ -10,9 +11,16 @@ export default function AllCard() {
         getAllPost();
     },[]);
 
+      useEffect(()=>{
+        Aos.init({
+          duration:500,
+          delay:200
+        });
+      },[]);
+
   return (
     <div className='container-fluid'>
-        <div className='row'>
+        <div className='row' data-aos="fade-up">
             {
                 posts.length > 0 ? 
                 (

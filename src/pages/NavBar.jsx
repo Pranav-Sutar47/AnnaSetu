@@ -23,6 +23,7 @@ export default function NavBar(){
       localStorage.clear();
       setLogin(false);
       showToast('Logout Successful!','success');
+      navigate('/home');
     }
 
     return(

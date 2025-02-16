@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Spinner } from "@chakra-ui/react";
 import { showToast } from "./ToastComponent";
 import CardComponent from "./CardComponent";
+import Aos from "aos";
 
 export default function UserPost() {
   const [load, setLoad] = useState(false);
@@ -45,6 +46,13 @@ export default function UserPost() {
     getPost();
   }, []);
 
+    useEffect(()=>{
+      Aos.init({
+        duration:500,
+        delay:200
+      });
+    },[]);
+
   return (
     <div className="container-fluid">
       {load && <div
@@ -63,7 +71,7 @@ export default function UserPost() {
     <Spinner size="lg" color={"teal"} />
   </div>}
       {!load && !found && <h1 className="text-center">No Posts found....</h1>}
-      <div className="row">
+      <div className="row" data-aos="fade-up">
         {
             userPosts.length > 0 ?
             <h1 className="text-center">Your Posts</h1>

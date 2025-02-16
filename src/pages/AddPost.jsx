@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import {
   Box,
@@ -18,8 +18,17 @@ import { LuFileUp } from "react-icons/lu";
 import { CloseButton } from "../components/ui/close-button";
 import { showToast } from "./ToastComponent";
 import axios from "axios";
+import Aos from "aos";
 
 export default function AddPost() {
+
+    useEffect(()=>{
+      Aos.init({
+        duration:500,
+        delay:200
+      });
+    },[]);
+
   const {
     register,
     handleSubmit,
@@ -108,7 +117,7 @@ export default function AddPost() {
 
   return (
     <div className="container mt-5">
-      <Form className="mt-5 mb-3 bg-light p-2 shadow-lg" onSubmit={handleSubmit(addData)} >
+      <Form className="mt-5 mb-3 bg-light p-2 shadow-lg" data-aos="fade-up" onSubmit={handleSubmit(addData)} >
         <Fieldset.Root size="lg" invalid>
           <Fieldset.Legend>Add Post</Fieldset.Legend>
           <Fieldset.Content>

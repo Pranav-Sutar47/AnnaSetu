@@ -89,6 +89,13 @@ export default function Signup() {
     setLoad(false);
   }
 
+    useEffect(()=>{
+      Aos.init({
+        duration:500,
+        delay:200
+      });
+    },[]);
+
 
   const [load1, setLoad1] = useState(false);
   const [show,setShow] = useState(false);

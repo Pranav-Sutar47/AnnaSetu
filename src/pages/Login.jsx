@@ -13,6 +13,13 @@ import AppContext from "../context/AppContext";
 
 export default function Login() {
 
+  useEffect(()=>{
+    Aos.init({
+      duration:500,
+      delay:200
+    });
+  },[]);
+
   const {setLogin} = useContext(AppContext);
 
   const [load,setLoad] = useState(false);

@@ -6,6 +6,7 @@ import { Provider } from './components/ui/provider'
 import {ToastContainer,Bounce} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import 'react-tooltip/dist/react-tooltip.css'
+import 'aos/dist/aos.css';
 
 createRoot(document.getElementById('root')).render(
   <Provider>
