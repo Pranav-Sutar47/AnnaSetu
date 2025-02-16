@@ -81,7 +81,11 @@ export default function UserPost() {
             {!load && userPosts.length > 0 &&
           userPosts.map((post, index) => {
             return (
-              <div className="col-md-3 col-sm-12 mt-2" key={index}>
+              <div
+                className="col-lg-4 col-md-6 col-sm-12 mt-2"
+                key={index}
+                style={{ display: "flex", justifyContent: "center" }} // Center cards in small screens
+              >
                 <CardComponent item={post} index={index} user={true}/>
               </div>
             );
